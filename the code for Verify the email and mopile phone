@@ -1,0 +1,46 @@
+package javaapplication394;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+/**
+ *
+ * @author renad
+ */
+class vEMAIL {
+
+    public boolean emailvv(String email) {
+        boolean s = false;
+        String emailPattern ="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}";
+        Pattern p = Pattern.compile(emailPattern);
+        Matcher m = p.matcher(email);
+        if (m.matches()) {
+            s = true;
+        } else {
+            s = false;
+        }
+
+        return s;
+
+    }
+
+}
+
+class Vphone {
+     public boolean phonev(String phone) {
+        boolean s = false;
+     //   String Phonepattern ="(\\\\(\\\\d{3}\\\\))|\\\\d{3})";
+        String Phonepattern ="^(?:966|\\+966|0)?(5)[0-9]{8}$";
+        Pattern p = Pattern.compile( Phonepattern);
+        Matcher m = p.matcher(phone);
+        if (m.matches()) {
+            s = true;
+        } else {
+            s = false;
+        }
+
+        return s;
+
+    }
+   
+}
